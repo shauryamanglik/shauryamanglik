@@ -1,5 +1,5 @@
 ---
-title: Welcome
+title: Datasheet
 tags:
 - tag1
 - tag2
@@ -7,18 +7,5 @@ tags:
 
 ## Hello, my name is Shaurya
 
-* List item 1
-* List item 2
-
-name | description
------|------------
-shaw | fun
-ben  | happy
-
-
-### This is a Sub-heading
-
-1. step 1
-2. step 2
-3. step 3
-4. step 4
+## Individual_Subsystem_EGR314_SM
+![BLOCKDIAGRAM_314](https://github.com/user-attachments/assets/f54ad6b6-9f22-4390-9884-9480ab0ae2c1)
