@@ -17,7 +17,7 @@
 <tr class="odd">
 <th>1.</th>
 <th><p>PIC18F27Q10-I/STX</p>
-![PICI-STX](https://github.com/user-attachments/assets/0c8daffa-e7b0-4bed-8f9b-c10b67bc5bb7)"
+<p><img src="[media/image3.png](https://www.mouser.com/images/microchiptechnology/images/PIC18F46Q71-E_P_SPL.jpg)"
 style="width:1.5625in;height:1.56944in" /></p>
 <p>Price: $1.36/unit</p>
 <p>Link: <a
