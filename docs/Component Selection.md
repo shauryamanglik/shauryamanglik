@@ -1,7 +1,3 @@
-**EGR314: Component Selection**
-
-**Shaurya Manglik**
-
 **1. Microcontroller**
 
 <table>
@@ -682,13 +678,11 @@ efficient for long-term use in the system.
 
 ### **3. Checking for Compatibility Issues:** {#checking-for-compatibility-issues}
 
-- The MPU-6050 gyroscope is commonly used with the PIC18F27Q10, but
-  > Microchip libraries and drivers should be verified.
+- The MPU-6050 gyroscope is commonly used with the PIC18F27Q10, but Microchip libraries and drivers should be verified.
 
 - Check if Microchip\'s I2C library supports MPU-6050 well.
 
-- Look for existing libraries for interfacing the MPU-6050 with PIC
-  > (Microchip Harmony, MPLAB Code Configurator, etc.).
+- Look for existing libraries for interfacing the MPU-6050 with PIC (Microchip Harmony, MPLAB Code Configurator, etc.)
 
 - Ensure no known I2C clock stretching issues with PIC.
 
@@ -708,8 +702,7 @@ human interface module for visualization.
 
 - **Power Management**: Ensuring compatibility with 3.3V power supply.
 
-- **Communication**: Handling I2C communication between the PIC and
-  > MPU-6050.
+- **Communication**: Handling I2C communication between the PIC and MPU-6050.
 
 ### **PIC Table**
 
@@ -746,8 +739,7 @@ human interface module for visualization.
 
 ### **Power Supply & Voltage Regulation Considerations:** {#power-supply-voltage-regulation-considerations}
 
-- **9V battery** → AMS1117-3.3S (Regulates down to 3.3V for PIC &
-  > MPU6050)
+- **9V battery** → AMS1117-3.3S (Regulates down to 3.3V for PIC & MPU6050)
 
 - **AMS1117-3.3S Connections:**
 
