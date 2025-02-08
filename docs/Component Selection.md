@@ -17,8 +17,7 @@
 <tr class="odd">
 <th>1.</th>
 <th><p>PIC18F27Q10-I/STX</p>
-<p><img src="![PICI-STX](https://github.com/user-attachments/assets/de119159-1bb1-4505-a1f9-6ef9e8628619)"
-![PICI-STX](https://github.com/user-attachments/assets/64cc54a0-44c4-4e5b-be88-0e0472c8565b)
+![PICI-STX](https://github.com/user-attachments/assets/0c8daffa-e7b0-4bed-8f9b-c10b67bc5bb7)"
 style="width:1.5625in;height:1.56944in" /></p>
 <p>Price: $1.36/unit</p>
 <p>Link: <a
@@ -709,12 +708,18 @@ human interface module for visualization.
 | **ESP Info**                                 | **Answer**                                                                                                                         |
 |----------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|
 | **Model**                                    | PIC18F27Q10                                                                                                                        |
-| **Product Page URL**                         | [[Microchip Product Page]{.underline}](https://www.digikey.com/en/products/detail/microchip-technology/PIC18F27Q10-I-STX/10187780) |
-| **Datasheet URL(s)**                         | [[Datasheet]{.underline}](https://ww1.microchip.com/downloads/en/DeviceDoc/PIC18F27-47Q10-Data-Sheet-40002043E.pdf)                |
-| **Application Notes URL(s)**                 | [[Application Notes]{.underline}](https://www.microchip.com/en-us/application-notes)                                               |
-| **Vendor link**                              | [[DigiKey]{.underline}](https://www.digikey.com/)                                                                                  |
-| **Code Examples**                            | [[Microchip GitHub]{.underline}](https://github.com/Microchip-MPLAB-Harmony)                                                       |
-| **External Resources URL(s)**                | [[YouTube]{.underline}](https://www.youtube.com/watch?v=CfWcoWoPKDs)                                                               |
+| **Product Page URL**                         | [Microchip Product Page](https://www.digikey.com/en/products/detail/microchip-technology/PIC18F27Q10-I-STX/10187780) 
+|
+| **Datasheet URL(s)**                         | [Datasheet](https://ww1.microchip.com/downloads/en/DeviceDoc/PIC18F27-47Q10-Data-Sheet-40002043E.pdf)                
+|
+| **Application Notes URL(s)**                 | [Application Notes](https://www.microchip.com/en-us/application-notes)                                               
+|
+| **Vendor link**                              | [DigiKey](https://www.digikey.com/)                                                                                  
+|
+| **Code Examples**                            | [Microchip GitHub](https://github.com/Microchip-MPLAB-Harmony)                                                       
+|
+| **External Resources URL(s)**                | [YouTube](https://www.youtube.com/watch?v=CfWcoWoPKDs)                                                               
+|
 | **Unit cost**                                | \$2.08                                                                                                                             |
 | **Absolute Maximum Current for entire IC**   | 250mA                                                                                                                              |
 | **Supply Voltage Range**                     | 2.3V (Min) / 3.3V or 5V (Nominal) / 5.5V (Max)                                                                                     |
@@ -773,5 +778,5 @@ human interface module for visualization.
 
 MPLABX MCC Screenshot:
 
-![](media/image9.png){width="3.0061581364829397in"
-height="1.7552088801399826in"}
+<img width="1728" alt="Screenshot 2025-02-07 at 9 20 41 PM" src="https://github.com/user-attachments/assets/8d5c8087-f553-4a0c-8d74-85fa67e1661e" />
+
