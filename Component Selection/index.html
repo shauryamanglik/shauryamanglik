@@ -1,0 +1,1721 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+
+<meta name="robots" content="nofollow" />
+
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://embedded-systems-design.github.io/template_report/Component%20Selection/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../charts/">
+      
+      
+      <link rel="icon" href="../static/logo.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.4.0">
+            
+
+        
+
+    
+      
+        <title>Component Selection - EGR314 Report Template</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.9f615399.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.649f08f9.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+
+
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#determine-project-specific-requirements" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="EGR314 Report Template" class="md-header__button md-logo" aria-label="EGR314 Report Template" data-md-component="logo">
+      
+  <img src="../static/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EGR314 Report Template
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Component Selection
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/embedded-systems-design/template_report" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  Datasheet
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+    
+  
+  Component Selection
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../charts/" class="md-tabs__link">
+        
+  
+    
+  
+  Charts
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../second-page/" class="md-tabs__link">
+        
+  
+    
+  
+  Second Page
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../subfolder/" class="md-tabs__link">
+          
+  
+    
+  
+  Subfolder
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="EGR314 Report Template" class="md-nav__button md-logo" aria-label="EGR314 Report Template" data-md-component="logo">
+      
+  <img src="../static/logo.svg" alt="logo">
+
+    </a>
+    EGR314 Report Template
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/embedded-systems-design/template_report" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Datasheet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Component Selection
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Component Selection
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#determine-project-specific-requirements" class="md-nav__link">
+    1. Determine Project-Specific Requirements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#researching-the-pic18f27q10-microcontroller" class="md-nav__link">
+    2. Researching the PIC18F27Q10 Microcontroller
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checking-for-compatibility-issues" class="md-nav__link">
+    3. Checking for Compatibility Issues:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#role-description" class="md-nav__link">
+    4. Role Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pic-table" class="md-nav__link">
+    PIC Table
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#available-modules-pin-assignments" class="md-nav__link">
+    Available Modules &amp; Pin Assignments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#power-supply-voltage-regulation-considerations" class="md-nav__link">
+    Power Supply &amp; Voltage Regulation Considerations:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#peripheral-breakdown" class="md-nav__link">
+    Peripheral Breakdown:
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../charts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Charts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../second-page/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Second Page
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../subfolder/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Subfolder
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#determine-project-specific-requirements" class="md-nav__link">
+    1. Determine Project-Specific Requirements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#researching-the-pic18f27q10-microcontroller" class="md-nav__link">
+    2. Researching the PIC18F27Q10 Microcontroller
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checking-for-compatibility-issues" class="md-nav__link">
+    3. Checking for Compatibility Issues:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#role-description" class="md-nav__link">
+    4. Role Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pic-table" class="md-nav__link">
+    PIC Table
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#available-modules-pin-assignments" class="md-nav__link">
+    Available Modules &amp; Pin Assignments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#power-supply-voltage-regulation-considerations" class="md-nav__link">
+    Power Supply &amp; Voltage Regulation Considerations:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#peripheral-breakdown" class="md-nav__link">
+    Peripheral Breakdown:
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/embedded-systems-design/template_report/edit/main/docs/Component Selection.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
+  
+  
+
+
+  <h1>Component Selection</h1>
+
+<p><strong>EGR314: Component Selection</strong></p>
+<p><strong>Shaurya Manglik</strong></p>
+<p><strong>1. Microcontroller</strong></p>
+<table>
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 26%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Option</strong></th>
+<th><strong>Component</strong></th>
+<th><strong>Pros</strong></th>
+<th><strong>Cons</strong></th>
+</tr>
+<tr class="odd">
+<th>1.</th>
+<th><p>PIC18F27Q10-I/STX</p>
+<p><img src="media/image3.png"
+style="width:1.5625in;height:1.56944in" /></p>
+<p>Price: $1.36/unit</p>
+<p>Link: <a
+href="https://www.digikey.com/en/products/detail/microchip-technology/PIC18F27Q10-I-STX/10187780"><u>Click
+Here</u></a></p>
+<p><a
+href="https://ww1.microchip.com/downloads/en/DeviceDoc/PIC18F27-47Q10-Data-Sheet-40002043E.pdf"><u>Datasheet</u></a></p>
+<p>Mfr: Microchip Technology</p></th>
+<th><ul>
+<li><blockquote>
+<p><strong>High-Performance 8-bit MCU</strong> – Optimized for real-time
+control applications.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Multiple Communication Interfaces</strong> – Supports SPI,
+I²C, and UART, useful for interfacing with a gyroscope.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Low Power Consumption</strong> – Ideal for battery-operated
+systems.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Configurable Logic &amp; Peripherals</strong> – Reduces the
+need for external components.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Analog Features</strong> – Includes ADC and comparators,
+useful for sensor integration.</p>
+</blockquote></li>
+</ul></th>
+<th><ul>
+<li><blockquote>
+<p><strong>Limited Processing Power</strong> – As an 8-bit MCU, it may
+struggle with heavy computations.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>No Floating-Point Unit</strong> – Could make complex math
+operations slower.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Limited RAM (3.8 KB)</strong> – Might be restrictive for
+data-heavy applications.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Through-Hole Package (DIP-28)</strong> – Good for
+prototyping, but may not be ideal for compact designs.</p>
+</blockquote></li>
+</ul></th>
+</tr>
+<tr class="header">
+<th>2.</th>
+<th><p>PIC18F46Q71-I/P</p>
+<p><img src="media/image1.png"
+style="width:1.5625in;height:0.69792in" /></p>
+<p>Price: $2.43/unit</p>
+<p>Link: <a
+href="https://www.mouser.com/ProductDetail/Microchip-Technology/PIC18F46Q71-I-P?qs=8Wlm6%252BaMh8QSpCj2xCNqDg%3D%3D"><u>Click
+Here</u></a></p>
+<p><a
+href="https://www.mouser.com/datasheet/2/268/PIC18F26_46_56Q71_Microcontroller_Data_Sheet_DS400-3314555.pdf"><u>Datasheet</u></a></p>
+<p>Mfr: Microchip Technology</p></th>
+<th><ul>
+<li><blockquote>
+<p><strong>More Processing Power</strong> – 8-bit MCU but with a higher
+feature set than standard PIC18s.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Dedicated Math Accelerator</strong> – Helps with DSP-like
+operations, useful for sensor fusion.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Multiple Communication Interfaces</strong> – SPI, I²C, and
+UART for seamless gyroscope integration.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Advanced Analog Features</strong> – 12-bit ADC, op-amps, and
+DAC, improving sensor signal handling.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Extended Temperature Range</strong> – Good for industrial
+applications.</p>
+</blockquote></li>
+</ul></th>
+<th><ul>
+<li><blockquote>
+<p><strong>Larger Package (DIP-40)</strong> – Takes up more PCB space,
+which may not be ideal for compact designs.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Still 8-bit</strong> – Might be limiting for high-speed or
+complex real-time processing.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>No Floating-Point Support</strong> – Can slow down complex
+calculations.</p>
+</blockquote></li>
+</ul></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+
+<p>I chose the PIC18F27Q10 because it provides the necessary communication
+interfaces (SPI, I²C, UART) for gyroscope data collection, has low power
+consumption, and includes configurable peripherals that simplify
+integration. Additionally, it was already available in class, making it
+a more convenient and cost-effective choice.</p>
+<p><strong>2. Gyroscope</strong></p>
+<table>
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 26%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Option</strong></th>
+<th><strong>Component</strong></th>
+<th><strong>Pros</strong></th>
+<th><strong>Cons</strong></th>
+</tr>
+<tr class="odd">
+<th>1.</th>
+<th><p>MPU-6050</p>
+<p><img src="media/image2.png"
+style="width:1.5625in;height:1.56944in" /></p>
+<p>Price: $13.95/unit</p>
+<p>Link: <a
+href="https://www.sparkfun.com/3-axis-gyro-accelerometer-ic-mpu-6050.html?gQT=1"><u>Click
+Here</u></a></p>
+<p><a
+href="https://cdn.sparkfun.com/datasheets/Components/General%20IC/PS-MPU-6000A.pdf"><u>Datasheet</u></a></p>
+<p>Mfr: InvenSense</p></th>
+<th><ul>
+<li><blockquote>
+<p><strong>3.3V Compatible</strong> – Works with desired power
+setup.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>I²C Communication</strong> – Simple two-wire interface.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Built-in Accelerometer &amp; Gyroscope</strong> – Provides
+6DOF motion tracking.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Digital Motion Processor (DMP)</strong> – Offloads sensor
+fusion calculations from the MCU.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Low Power Consumption</strong> – Suitable for battery-powered
+applications.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Well-Supported in MicroPython</strong> – Libraries available
+for easy integration.</p>
+</blockquote></li>
+</ul></th>
+<th><ul>
+<li><blockquote>
+<p><strong>No Magnetometer</strong> – Cannot determine absolute
+orientation without an external sensor.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Can Be Noisy</strong> – Requires filtering for precise
+readings.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Factory Calibration May Vary</strong> – Might need additional
+software calibration.</p>
+</blockquote></li>
+</ul></th>
+</tr>
+<tr class="header">
+<th>2.</th>
+<th><p>A3G4250DTR</p>
+<p><img src="media/image11.png"
+style="width:1.5625in;height:1.5625in" /></p>
+<p>Price: $15.66/unit</p>
+<p>Link: <a
+href="https://www.mouser.com/ProductDetail/STMicroelectronics/A3G4250DTR?qs=Ld7sMN6XJzCU8%252BkHd1RE7g%3D%3D&amp;mgh=1&amp;gQT=1"><u>Click
+Here</u></a></p>
+<p><a
+href="https://www.mouser.com/datasheet/2/389/a3g4250d-1849040.pdf"><u>Datasheet</u></a></p>
+<p>Mfr: STMicroelectronics</p></th>
+<th><ul>
+<li><blockquote>
+<p><strong>3.3V Operation</strong> – Directly compatible with desired
+power supply.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>I²C &amp; SPI Support</strong> – Flexible communication
+options.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>High-Resolution (16-bit output)</strong> – Provides precise
+angular rate data.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Low Power Consumption</strong> – Suitable for
+battery-operated applications.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Embedded Low-Pass Filter</strong> – Helps reduce noise in
+measurements.</p>
+</blockquote></li>
+</ul></th>
+<th><ul>
+<li><blockquote>
+<p><strong>No Accelerometer or Magnetometer</strong> – Only provides
+gyroscope data.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Limited Community Support</strong> – Fewer MicroPython
+libraries available.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Fixed Full-Scale Range (±245 dps)</strong> – Not adjustable
+for higher-speed motion tracking.</p>
+</blockquote></li>
+</ul></th>
+</tr>
+<tr class="odd">
+<th>3.</th>
+<th><p>ICM-20948</p>
+<p><img src="media/image6.png"
+style="width:1.5625in;height:1.56944in" /></p>
+<p>Price: $7.11/unit</p>
+<p>Link: <a
+href="https://www.digikey.com/en/products/detail/tdk-invensense/ICM-20948/7062698"><u>Click
+Here</u></a></p>
+<p><a
+href="http://www.invensense.com/wp-content/uploads/2016/06/DS-000189-ICM-20948-v1.3.pdf"><u>Datasheet</u></a></p>
+<p>Mfr: TDK InvenSense</p></th>
+<th><ul>
+<li><blockquote>
+<p><strong>9-DOF Sensor:</strong> Includes a <strong>3-axis gyroscope,
+3-axis accelerometer, and 3-axis magnetometer</strong> for comprehensive
+motion sensing.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Low Power Consumption:</strong> Optimized for battery-powered
+applications.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>I2C &amp; SPI Support:</strong> Provides flexibility in
+communication options.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Built-in DMP (Digital Motion Processor):</strong> Offloads
+sensor fusion and calculations from the microcontroller.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>High Sensitivity:</strong> Precise motion tracking with
+<strong>±2000 dps gyroscope, ±16g accelerometer, and ±4900µT
+magnetometer</strong>.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Small Form Factor:</strong> Suitable for compact embedded
+systems.</p>
+</blockquote></li>
+</ul></th>
+<th><ul>
+<li><blockquote>
+<p><strong>Complex Configuration:</strong> Requires multiple
+initialization steps and careful register management.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Limited 3.3V Compatibility:</strong> Needs <strong>level
+shifting</strong> if interfacing with <strong>5V
+microcontrollers</strong>.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Magnetometer Requires Extra Handling:</strong> Uses an
+<strong>AK09916</strong> chip internally, requiring separate I2C
+communication.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Higher Cost:</strong> More expensive than simpler IMUs like
+the <strong>MPU6050</strong>.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Limited Library Support in MicroPython:</strong> Might
+require custom driver development for full functionality.</p>
+</blockquote></li>
+</ul></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+
+<p>I chose the MPU-6050 over the others because it includes both a
+gyroscope and accelerometer, providing 6DOF motion tracking, whereas the
+A3G4250DTR only offers gyroscope data. The MPU-6050 has better
+MicroPython support, making integration easier, and operates at 3.3V
+with I²C, aligning well with my system's power and communication setup.</p>
+<p><strong>3. Voltage Regulator</strong></p>
+<table>
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 26%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Option</strong></th>
+<th><strong>Component</strong></th>
+<th><strong>Pros</strong></th>
+<th><strong>Cons</strong></th>
+</tr>
+<tr class="odd">
+<th>1.</th>
+<th><p>LM2675MX-3.3/NOPB</p>
+<p><img src="media/image7.png"
+style="width:1.5625in;height:1.56944in" /></p>
+<p>Price: $4.36/unit</p>
+<p>Link: <a
+href="https://www.digikey.com/en/products/detail/texas-instruments/LM2675MX-3-3-NOPB/366907"><u>Click
+Here</u></a></p>
+<p><a
+href="https://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&amp;gotoUrl=https%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Flm2675"><u>Datasheet</u></a></p>
+<p>Mfr: Texas Instruments</p></th>
+<th><ul>
+<li><blockquote>
+<p><strong>Switching Regulator (Buck Converter)</strong> – Higher
+efficiency than linear regulators.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>3.3V Fixed Output</strong> – No need for external voltage
+adjustment.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Wide Input Voltage Range (6.5V–40V)</strong> – Compatible
+with a 9V battery.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>High Efficiency (~90%)</strong> – Reduces heat and extends
+battery life.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>500mA Output Current</strong> – Sufficient for low-power
+microcontroller systems.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Built-in Thermal Shutdown and Current Limiting</strong> –
+Protects against overheating and overcurrent.</p>
+</blockquote></li>
+</ul></th>
+<th><ul>
+<li><blockquote>
+<p><strong>Requires External Inductor and Capacitors</strong> – More
+complex circuit design.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Larger Footprint than AMS1117</strong> – Takes up more PCB
+space.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>More Expensive than Linear Regulators</strong> – Higher cost
+per unit.</p>
+</blockquote></li>
+</ul></th>
+</tr>
+<tr class="header">
+<th>2.</th>
+<th><p>AMS1117-3.3S</p>
+<p><img src="media/image8.png"
+style="width:1.5625in;height:1.56944in" /></p>
+<p>Price: $0.47/unit</p>
+<p>Link: <a
+href="https://www.digikey.com/en/products/detail/evvo/AMS1117-3-3S/24370078"><u>Click
+Here</u></a></p>
+<p><a
+href="https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/6283/AMS1117-3.3S.pdf"><u>Datasheet</u></a></p>
+<p>Mfr: EVVO</p></th>
+<th><ul>
+<li><blockquote>
+<p><strong>3.3V Fixed Output</strong> – Stable voltage for
+microcontrollers and sensors.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>800mA Maximum Output Current</strong> – Sufficient for
+low-power embedded systems.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Compact SOT-223 Package</strong> – Saves PCB space.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Simple Implementation</strong> – Requires minimal external
+components (capacitors for stability).</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Low Cost</strong> – Affordable for most applications.</p>
+</blockquote></li>
+</ul></th>
+<th><ul>
+<li><blockquote>
+<p><strong>Linear Regulator (Low Efficiency)</strong> – Converts excess
+power into heat, reducing battery life.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Requires Heat Dissipation</strong> – May need a heat sink at
+higher loads.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Higher Power Loss Compared to Switching Regulators</strong> –
+Not ideal for energy-efficient designs.</p>
+</blockquote></li>
+</ul></th>
+</tr>
+<tr class="odd">
+<th>3.</th>
+<th><p>AMS1117-3.3</p>
+<p><img src="media/image5.png"
+style="width:1.5625in;height:1.56944in" /></p>
+<p>Price: $0.68/unit</p>
+<p>Link: <a
+href="https://www.digikey.com/en/products/detail/umw/AMS1117-3-3/17635254"><u>Click
+Here</u></a></p>
+<p><a
+href="https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/5011/AMS1117.pdf"><u>Datasheet</u></a></p>
+<p>Mfr: UMW</p></th>
+<th><ul>
+<li><blockquote>
+<p><strong>Low Dropout Voltage:</strong> Requires only
+<strong>1.1V</strong> difference between input and output, making it
+efficient for regulating <strong>9V down to 3.3V</strong>.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>3.3V Fixed Output:</strong> Perfect for powering
+<strong>low-voltage microcontrollers and sensors</strong> like the
+<strong>PIC18F27Q10</strong> and <strong>MPU6050</strong>.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Simple Design:</strong> Only requires a few capacitors for
+stability.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Compact Size:</strong> Available in <strong>SOT-223
+package</strong>, ideal for PCB designs.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Affordable &amp; Widely Available:</strong> Low-cost voltage
+regulation solution.</p>
+</blockquote></li>
+</ul></th>
+<th><ul>
+<li><blockquote>
+<p><strong>Low Current Output:</strong> Maximum <strong>800mA</strong>,
+which may be insufficient for power-hungry peripherals.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Linear Regulator Efficiency:</strong> Wastes excess energy as
+heat, especially when stepping down from <strong>9V to
+3.3V</strong>.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Requires Heat Dissipation:</strong> Can overheat if powering
+multiple components without a heatsink.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Not the Best for Battery-Powered Applications:</strong>
+Inefficient compared to <strong>switching regulators (buck
+converters)</strong>.</p>
+</blockquote></li>
+</ul></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+
+<p>The AMS1117-3.3S was chosen over the others because it is simpler to
+implement, requires fewer external components, and is more compact and
+cost-effective for the system's power needs. While it has lower
+efficiency, heat dissipation is manageable given the system's power
+requirements.</p>
+<p><strong>4. Power Supply</strong></p>
+<table>
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 26%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Option</strong></th>
+<th><strong>Component</strong></th>
+<th><strong>Pros</strong></th>
+<th><strong>Cons</strong></th>
+</tr>
+<tr class="odd">
+<th>1.</th>
+<th><p>B0B248DSFG</p>
+<p><img src="media/image10.png"
+style="width:1.5625in;height:1.29167in" /></p>
+<p>Price: $11.98</p>
+<p>Link: <a
+href="https://www.amazon.com/PAISUE-Rechargeable-Lithium-ion-Multimeter-Microphone/dp/B0B248DSFG?source=ps-sl-shoppingads-lpcontext&amp;ref_=fplfs&amp;smid=A2WEVNKRB72JGE&amp;gQT=1&amp;th=1"><u>Click
+Here</u></a></p>
+<p><a href="https://a.co/d/bxvgbKX"><u>Datasheet</u></a></p>
+<p>Mfr: LCLEBM</p></th>
+<th><ul>
+<li><blockquote>
+<p><strong>9V, 1500mAh Capacity</strong> – Provides decent runtime for
+low-power applications.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Rechargeable Li-ion Chemistry</strong> – Reduces waste and
+long-term costs.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Built-in Protection Circuit</strong> – Prevents overcharging,
+over-discharging, and short circuits.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Compact Size</strong> – Fits standard 9V battery holders.</p>
+</blockquote></li>
+</ul></th>
+<th><ul>
+<li><blockquote>
+<p><strong>Actual Capacity May Be Lower Than Advertised</strong> – Some
+9V Li-ion batteries have lower true capacity.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Voltage Drops Under Load</strong> – May affect performance in
+high-current applications.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Requires a Compatible Charger</strong> – Cannot be charged
+with a standard NiMH or alkaline charger.</p>
+</blockquote></li>
+</ul></th>
+</tr>
+<tr class="header">
+<th>2.</th>
+<th><p>3046-9V-ND</p>
+<p><img src="media/image4.png"
+style="width:1.5625in;height:1.56944in" /></p>
+<p>Price: $4.46/unit</p>
+<p>Link: <a
+href="https://www.digikey.com/en/products/detail/duracell-industrial-operations-inc/9V/21259959"><u>Click
+Here</u></a></p>
+<p><a
+href="https://www.duracell.com/wp-content/uploads/2016/03/MN1604_US_CT1.pdf"><u>Datasheet</u></a></p>
+<p>Mfr: Duracell</p></th>
+<th><ul>
+<li><blockquote>
+<p><strong>Reliable Duracell Brand</strong> – Known for consistent
+quality and performance.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Alkaline Chemistry</strong> – Provides stable voltage for
+moderate-power applications.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>No Recharge Required</strong> – Convenient for one-time use
+scenarios.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Long Shelf Life</strong> – Retains charge well when
+stored.</p>
+</blockquote></li>
+</ul></th>
+<th><ul>
+<li><blockquote>
+<p><strong>Non-Rechargeable</strong> – Increases long-term cost and
+waste.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Lower Capacity Than Li-ion</strong> – Drains faster under
+high loads.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Voltage Drops Over Time</strong> – Performance degrades as
+the battery discharges.</p>
+</blockquote></li>
+</ul></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+
+<p>The B0B248DSFG (9V Li-ion) was chosen over the Duracell 9V (alkaline)
+because it is rechargeable, offers a higher capacity, and maintains a
+more stable voltage under load, making it more cost-effective and
+efficient for long-term use in the system.</p>
+<p><strong>Microcontroller Selection:</strong></p>
+<h3 id="determine-project-specific-requirements"><strong>1. Determine Project-Specific Requirements</strong></h3>
+<ul>
+<li>
+<p><strong>Communication Protocols:</strong></p>
+</li>
+<li>
+<p><strong>SPI</strong>: Likely needed for high-speed data transfer (check gyroscope
+    &gt; requirements).</p>
+</li>
+<li>
+<p><strong>I2C</strong>: Used for lower-speed sensors (MPU-6050 uses I2C).</p>
+</li>
+<li>
+<p><strong>UART</strong>: Might be needed for debugging or interfacing with other
+    &gt; systems.</p>
+</li>
+<li>
+<p><strong>Pin Requirements:</strong></p>
+</li>
+<li>
+<p><strong>Power &amp; Ground</strong>: At least 2 pins.</p>
+</li>
+<li>
+<p><strong>Programming</strong>: 1 pin for ICSP (for the PIC).</p>
+</li>
+<li>
+<p><strong>GPIO</strong>: Additional for controlling/resetting components.</p>
+</li>
+<li>
+<p><strong>Communication</strong>: I2C (SCL, SDA), SPI (MISO, MOSI, SCK, SS), and
+    &gt; possibly UART.</p>
+</li>
+</ul>
+<h3 id="researching-the-pic18f27q10-microcontroller"><strong>2. Researching the PIC18F27Q10 Microcontroller</strong></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Feature</strong></th>
+<th><strong>PIC18F27Q10</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pins</td>
+<td>28</td>
+</tr>
+<tr>
+<td>I2C</td>
+<td>2 modules</td>
+</tr>
+<tr>
+<td>SPI</td>
+<td>2 modules</td>
+</tr>
+<tr>
+<td>UART</td>
+<td>2 modules</td>
+</tr>
+<tr>
+<td>GPIO</td>
+<td>25 (shared with other functions)</td>
+</tr>
+<tr>
+<td>Operating Voltage</td>
+<td>3.3V or 5V</td>
+</tr>
+<tr>
+<td>Flash Memory</td>
+<td>128 KB</td>
+</tr>
+<tr>
+<td>RAM</td>
+<td>8 KB</td>
+</tr>
+<tr>
+<td>EEPROM</td>
+<td>1 KB</td>
+</tr>
+<tr>
+<td>Clock Speed</td>
+<td>64 MHz</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p><strong>Meets Requirements</strong>:</p>
+</li>
+<li>
+<p>Supports I2C (needed for MPU-6050)</p>
+</li>
+<li>
+<p>Has enough GPIOs for additional connections</p>
+</li>
+<li>
+<p>Multiple communication protocols (SPI, UART, etc.)</p>
+</li>
+<li>
+<p><strong>Exceeds Requirements</strong>:</p>
+</li>
+<li>
+<p>Extra memory and processing power beyond the immediate need.</p>
+</li>
+<li>
+<p><strong>Does Not Meet Requirements</strong>:</p>
+</li>
+<li>
+<p>No built-in WiFi/Bluetooth (handled by the ESP32 on another team
+    &gt; member's end).</p>
+</li>
+</ul>
+<h3 id="checking-for-compatibility-issues"><strong>3. Checking for Compatibility Issues:</strong></h3>
+<ul>
+<li>
+<p>The MPU-6050 gyroscope is commonly used with the PIC18F27Q10, but</p>
+<blockquote>
+<p>Microchip libraries and drivers should be verified.</p>
+</blockquote>
+</li>
+<li>
+<p>Check if Microchip\'s I2C library supports MPU-6050 well.</p>
+</li>
+<li>
+<p>Look for existing libraries for interfacing the MPU-6050 with PIC</p>
+<blockquote>
+<p>(Microchip Harmony, MPLAB Code Configurator, etc.).</p>
+</blockquote>
+</li>
+<li>
+<p>Ensure no known I2C clock stretching issues with PIC.</p>
+</li>
+</ul>
+<h3 id="role-description"><strong>4. Role Description</strong></h3>
+<p>As part of Team 309, the responsibility is to interface the MPU-6050
+gyroscope with the PIC18F27Q10 to measure the rotation speed of the
+spinning top\'s motor. This data will then be transmitted to another
+team member's ESP32, which will handle further communication with the
+human interface module for visualization.</p>
+<p><strong>Key Responsibilities:</strong></p>
+<ul>
+<li>
+<p><strong>Sensing</strong>: Capturing rotational data via MPU-6050 (I2C).</p>
+</li>
+<li>
+<p><strong>Processing</strong>: Sending processed data from PIC18F27Q10 to ESP32.</p>
+</li>
+<li>
+<p><strong>Power Management</strong>: Ensuring compatibility with 3.3V power supply.</p>
+</li>
+<li>
+<p><strong>Communication</strong>: Handling I2C communication between the PIC and</p>
+<blockquote>
+<p>MPU-6050.</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="pic-table"><strong>PIC Table</strong></h3>
+<table>
+<thead>
+<tr>
+<th><strong>ESP Info</strong></th>
+<th><strong>Answer</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Model</strong></td>
+<td>PIC18F27Q10</td>
+</tr>
+<tr>
+<td><strong>Product Page URL</strong></td>
+<td><a href="https://www.digikey.com/en/products/detail/microchip-technology/PIC18F27Q10-I-STX/10187780">[Microchip Product Page]{.underline}</a></td>
+</tr>
+<tr>
+<td><strong>Datasheet URL(s)</strong></td>
+<td><a href="https://ww1.microchip.com/downloads/en/DeviceDoc/PIC18F27-47Q10-Data-Sheet-40002043E.pdf">[Datasheet]{.underline}</a></td>
+</tr>
+<tr>
+<td><strong>Application Notes URL(s)</strong></td>
+<td><a href="https://www.microchip.com/en-us/application-notes">[Application Notes]{.underline}</a></td>
+</tr>
+<tr>
+<td><strong>Vendor link</strong></td>
+<td><a href="https://www.digikey.com/">[DigiKey]{.underline}</a></td>
+</tr>
+<tr>
+<td><strong>Code Examples</strong></td>
+<td><a href="https://github.com/Microchip-MPLAB-Harmony">[Microchip GitHub]{.underline}</a></td>
+</tr>
+<tr>
+<td><strong>External Resources URL(s)</strong></td>
+<td><a href="https://www.youtube.com/watch?v=CfWcoWoPKDs">[YouTube]{.underline}</a></td>
+</tr>
+<tr>
+<td><strong>Unit cost</strong></td>
+<td>$2.08</td>
+</tr>
+<tr>
+<td><strong>Absolute Maximum Current for entire IC</strong></td>
+<td>250mA</td>
+</tr>
+<tr>
+<td><strong>Supply Voltage Range</strong></td>
+<td>2.3V (Min) / 3.3V or 5V (Nominal) / 5.5V (Max)</td>
+</tr>
+<tr>
+<td><strong>Absolute Maximum Current (for entire IC)</strong></td>
+<td>250mA</td>
+</tr>
+<tr>
+<td><strong>Maximum GPIO current (per pin)</strong></td>
+<td>25mA</td>
+</tr>
+<tr>
+<td><strong>Supports External Interrupts?</strong></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><strong>Required Programming Hardware, Cost, URL</strong></td>
+<td>None</td>
+</tr>
+<tr>
+<td><strong>Works with MPLabX?</strong></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><strong>Works with Microchip Code Configurator?</strong></td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="available-modules-pin-assignments"><strong>Available Modules &amp; Pin Assignments</strong></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Module</strong></th>
+<th><strong># Available</strong></th>
+<th><strong>Needed</strong></th>
+<th><strong>Associated Pins (or * for any)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>GPIO</strong></td>
+<td>25</td>
+<td>4</td>
+<td>*</td>
+</tr>
+<tr>
+<td><strong>ADC</strong></td>
+<td>11</td>
+<td>0</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><strong>UART</strong></td>
+<td>2</td>
+<td>1</td>
+<td>TX, RX</td>
+</tr>
+<tr>
+<td><strong>SPI</strong></td>
+<td>2</td>
+<td>1</td>
+<td>SCK, MISO, MOSI, SS</td>
+</tr>
+<tr>
+<td><strong>I2C</strong></td>
+<td>2</td>
+<td>1</td>
+<td>SDA, SCL</td>
+</tr>
+<tr>
+<td><strong>PWM</strong></td>
+<td>7</td>
+<td>0</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><strong>ICSP</strong></td>
+<td>1</td>
+<td>1</td>
+<td>PGD, PGC, MCLR</td>
+</tr>
+</tbody>
+</table>
+<h3 id="power-supply-voltage-regulation-considerations"><strong>Power Supply &amp; Voltage Regulation Considerations:</strong></h3>
+<ul>
+<li>
+<p><strong>9V battery</strong> → AMS1117-3.3S (Regulates down to 3.3V for PIC &amp;</p>
+<blockquote>
+<p>MPU6050)</p>
+</blockquote>
+</li>
+<li>
+<p><strong>AMS1117-3.3S Connections:</strong></p>
+</li>
+<li>
+<p>Vin → 9V Battery</p>
+</li>
+<li>
+<p>Vout → PIC18F27Q10 (VDD) &amp; MPU6050 (VCC)</p>
+</li>
+<li>
+<p>GND → Common ground</p>
+</li>
+</ul>
+<h3 id="peripheral-breakdown"><strong>Peripheral Breakdown:</strong></h3>
+<ul>
+<li>
+<p><strong>MPU6050 Gyroscope (I2C Interface)</strong></p>
+</li>
+<li>
+<p>SCL → RC3 (Pin 18)</p>
+</li>
+<li>
+<p>SDA → RC4 (Pin 23)</p>
+</li>
+<li>
+<p>VCC → 3.3V (From AMS1117)</p>
+</li>
+<li>
+<p>GND → Common Ground</p>
+</li>
+<li>
+<p>INT (Optional) → Assign to an available GPIO if needed</p>
+</li>
+<li>
+<p><strong>Voltage Regulator (AMS1117-3.3S)</strong></p>
+</li>
+<li>
+<p>Vin → 9V Battery</p>
+</li>
+<li>
+<p>Vout → 3.3V for PIC &amp; MPU6050</p>
+</li>
+<li>
+<p>GND → Common Ground</p>
+</li>
+</ul>
+<p>MPLABX MCC Screenshot:</p>
+<p><a class="glightbox" href="media/image9.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="media/image9.png" /></a>{width="3.0061581364829397in"
+height="1.7552088801399826in"}</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Datasheet" rel="prev">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Datasheet
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../charts/" class="md-footer__link md-footer__link--next" aria-label="Next: Charts" rel="next">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Charts
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 team-name-here
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="/2023_fall" target="_blank" rel="noopener" title="2023 Site" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M64 464c-8.8 0-16-7.2-16-16V64c0-8.8 7.2-16 16-16h160v80c0 17.7 14.3 32 32 32h80v288c0 8.8-7.2 16-16 16H64zM64 0C28.7 0 0 28.7 0 64v384c0 35.3 28.7 64 64 64h256c35.3 0 64-28.7 64-64V154.5c0-17-6.7-33.3-18.7-45.3l-90.6-90.5C262.7 6.7 246.5 0 229.5 0H64zm97 289c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0L79 303c-9.4 9.4-9.4 24.6 0 33.9l48 48c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-31-31 31-31zm96-34c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l31 31-31 31c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l48-48c9.4-9.4 9.4-24.6 0-33.9l-48-48z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "toc.follow", "navigation.top", "navigation.path", "navigation.indexes", "navigation.prune", "content.action.edit", "navigation.footer"], "search": "../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.4e0fa4ba.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
