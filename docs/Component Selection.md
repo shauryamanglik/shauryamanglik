@@ -1,6 +1,4 @@
-﻿**EGR314: Component Selection**
-
-**Shaurya Manglik**
+﻿**Component Selection**
 
 **1. Microcontroller**
 
