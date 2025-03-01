@@ -12,13 +12,13 @@
       
       
       
-        <link rel="canonical" href="https://embedded-systems-design.github.io/template_report/Bill%20of%20Materials/">
+        <link rel="canonical" href="https://embedded-systems-design.github.io/template_report/Power%20Budget/">
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../Individual%20Schematic/">
       
       
-        <link rel="next" href="../Block%20Diagram/">
+        <link rel="next" href="../subfolder/">
       
       
       <link rel="icon" href="../static/logo.png">
@@ -29,7 +29,7 @@
 
     
       
-        <title>Bill of Materials - EGR314 Shaurya Manglik</title>
+        <title>Power Budget - EGR314 Shaurya Manglik</title>
       
     
     
@@ -92,6 +92,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#power-budget" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -123,7 +128,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Bill of Materials
+              Power Budget
             
           </span>
         </div>
@@ -212,11 +217,9 @@
         
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../Bill%20of%20Materials/" class="md-tabs__link">
         
   
     
@@ -299,9 +302,11 @@
         
   
   
+    
   
-    <li class="md-tabs__item">
-      <a href="../Power%20Budget/" class="md-tabs__link">
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
         
   
     
@@ -406,16 +411,9 @@
       
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Bill%20of%20Materials/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -424,7 +422,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -509,9 +506,27 @@
       
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../Power%20Budget/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Power Budget
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -520,6 +535,31 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#power-budget" class="md-nav__link">
+    Power Budget
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -585,6 +625,21 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#power-budget" class="md-nav__link">
+    Power Budget
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -598,7 +653,7 @@
                   
 
   
-    <a href="https://github.com/embedded-systems-design/template_report/edit/main/docs/Bill of Materials.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/embedded-systems-design/template_report/edit/main/docs/Power Budget.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -606,174 +661,89 @@
   
 
 
-  <h1>Bill of Materials</h1>
+  <h1>Power Budget</h1>
 
+<h3 id="power-budget"><a name="_2vz3p7p7ep0x"></a><strong>Power Budget</strong></h3>
+<ol>
+<li><strong>Microcontroller: PIC18F27Q10T-I/ML</strong></li>
+<li><strong>Voltage:</strong> 3.3V</li>
+<li><strong>Typical Current Consumption:</strong> ~5-20mA (varies by operation mode)</li>
+<li><strong>Max Current Consumption:</strong> ~50mA</li>
+<li><strong>MPU-6500 (Gyroscope/Accelerometer)</strong></li>
+<li><strong>Voltage:</strong> 3.3V</li>
+<li><strong>Typical Current Consumption:</strong> ~3.9mA (active mode)</li>
+<li><strong>Max Current Consumption:</strong> ~10mA</li>
+<li><strong>LMR50410Y3FQDBVRQ1 (3.3V Switching Regulator)</strong></li>
+<li><strong>Efficiency:</strong> ~80-90%</li>
+<li><strong>Input Voltage:</strong> 9V</li>
+<li><strong>Current Draw (assuming ~100mA load):</strong> ~40mA from 9V battery</li>
+<li><strong>LED Indicator (Debugging)</strong></li>
+<li><strong>Voltage:</strong> 3.3V</li>
+<li><strong>Current Consumption:</strong> ~5-10mA (per LED, assuming one active at a time)</li>
+<li><strong>Resistors &amp; Passive Components (Negligible Current Draw)</strong></li>
+<li>4.7kΩ pull-ups (SDA/SCL) → minimal impact</li>
+<li>Decoupling capacitors → only transient current impact</li>
+</ol>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;"><strong>Qty</strong></th>
-<th style="text-align: left;"><strong>Part Number</strong></th>
-<th style="text-align: left;"><strong>Direct Website Link to Product</strong></th>
-<th style="text-align: left;"><strong>General Description of Item</strong></th>
-<th style="text-align: left;"><strong>Unit Price</strong></th>
-<th style="text-align: left;"><strong>Line Total</strong></th>
+<th style="text-align: center;"><strong>Component</strong></th>
+<th style="text-align: center;"><strong>Voltage (V)</strong></th>
+<th style="text-align: center;"><strong>Current (mA)</strong></th>
+<th style="text-align: center;"><strong>Power (mW)</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">4</td>
-<td style="text-align: left;">LMR50410Y3FQDBVRQ1</td>
-<td style="text-align: left;">https://www.digikey.com/en/products/detail/texas-instruments/LMR50410Y3FQDBVRQ1/13562985?s=N4IgTCBcDaIDIFkBKBWADAFgIxoJoGYAxARQBEAhANSWKxAF0BfIA</td>
-<td style="text-align: left;">Voltage Regulator</td>
-<td style="text-align: left;"><code></code>$           1.47 </td>
-<td style="text-align: left;"><code></code><em>$        5.88</em> </td>
+<td style="text-align: center;"><strong>PIC18F27Q10</strong></td>
+<td style="text-align: center;">3.3V</td>
+<td style="text-align: center;">20mA (typical)</td>
+<td style="text-align: center;">66mW</td>
 </tr>
 <tr>
-<td style="text-align: left;">10</td>
-<td style="text-align: left;">CL21B104KBCNNNC</td>
-<td style="text-align: left;">https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL21B104KBCNNNC/3886661?s=N4IgTCBcDaIMIBkwEYBCyAMAWA0quAckXCALoC%2BQA</td>
-<td style="text-align: left;">0.1uF Capacitor</td>
-<td style="text-align: left;"><code></code>$         0.120 </td>
-<td style="text-align: left;"><code></code><em>$        1.20</em> </td>
+<td style="text-align: center;"><strong>MPU-6500</strong></td>
+<td style="text-align: center;">3.3V</td>
+<td style="text-align: center;">4mA (typical)</td>
+<td style="text-align: center;">13.2mW</td>
 </tr>
 <tr>
-<td style="text-align: left;">5</td>
-<td style="text-align: left;">ERJ-8ENF4701V</td>
-<td style="text-align: left;">https://www.digikey.com/en/products/detail/panasonic-electronic-components/ERJ-8ENF4701V/1746047?s=N4IgTCBcDaIKICUBSAOOA5AYgFgOwAYBGANRAF0BfIA</td>
-<td style="text-align: left;">4.7K resistor</td>
-<td style="text-align: left;"><code></code>$         0.082 </td>
-<td style="text-align: left;"><code></code><em>$        0.41</em> </td>
+<td style="text-align: center;"><strong>LMR50410 Regulator</strong></td>
+<td style="text-align: center;">9V Input</td>
+<td style="text-align: center;">~40mA</td>
+<td style="text-align: center;">360mW</td>
 </tr>
 <tr>
-<td style="text-align: left;">10</td>
-<td style="text-align: left;">ERJ-P06F1002V</td>
-<td style="text-align: left;">https://www.digikey.com/en/products/detail/panasonic-electronic-components/ERJ-P06F1002V/3982406</td>
-<td style="text-align: left;">10K Resistor</td>
-<td style="text-align: left;"><code></code>$         0.086 </td>
-<td style="text-align: left;"><code></code><em>$        0.86</em> </td>
+<td style="text-align: center;"><strong>LED (Debugging)</strong></td>
+<td style="text-align: center;">3.3V</td>
+<td style="text-align: center;">5mA</td>
+<td style="text-align: center;">16.5mW</td>
 </tr>
 <tr>
-<td style="text-align: left;">5</td>
-<td style="text-align: left;">CL21B103KBCNNNC</td>
-<td style="text-align: left;">https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL21B103KBCNNNC/3889164</td>
-<td style="text-align: left;">10nF Capacitor</td>
-<td style="text-align: left;"><code></code>$         0.100 </td>
-<td style="text-align: left;"><code></code><em>$        0.50</em> </td>
+<td style="text-align: center;"><strong>Misc. (I²C Pull-ups, etc.)</strong></td>
+<td style="text-align: center;">3.3V</td>
+<td style="text-align: center;">~1mA</td>
+<td style="text-align: center;">~3.3mW</td>
 </tr>
 <tr>
-<td style="text-align: left;">10</td>
-<td style="text-align: left;">ERJ-6ENF1000V</td>
-<td style="text-align: left;">https://www.digikey.com/en/products/detail/panasonic-electronic-components/ERJ-6ENF1000V/111089?s=N4IgTCBcDaIKYCcBWBaAbHAdgMwIwAZCA3EAXQF8g</td>
-<td style="text-align: left;">100 resistor</td>
-<td style="text-align: left;"><code></code>$         0.053 </td>
-<td style="text-align: left;"><code></code><em>$        0.53</em> </td>
+<td style="text-align: center;"><strong>Total Power (at 3.3V Load)</strong></td>
+<td style="text-align: center;"><strong>3.3V</strong></td>
+<td style="text-align: center;"><strong>30-40mA</strong></td>
+<td style="text-align: center;"><strong>~132mW</strong></td>
 </tr>
 <tr>
-<td style="text-align: left;">5</td>
-<td style="text-align: left;">CL10B225KP8NNNC</td>
-<td style="text-align: left;">https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL10B225KP8NNNC/3886792?s=N4IgTCBcDaIMIBkCMAGAQmMBWA0gBQA4A5EuEAXQF8g</td>
-<td style="text-align: left;">2.2 uF capacitor</td>
-<td style="text-align: left;"><code></code>$         0.026 </td>
-<td style="text-align: left;"><code></code><em>$        0.13</em> </td>
-</tr>
-<tr>
-<td style="text-align: left;">5</td>
-<td style="text-align: left;">CL10A106MP8NNNC</td>
-<td style="text-align: left;">https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL10A106MP8NNNC/3887529?s=N4IgTCBcDaIMIBkCMAGAgqgbAWQAoA4A5YuEAXQF8g</td>
-<td style="text-align: left;">10 uF capacitor</td>
-<td style="text-align: left;"><code></code>$         0.050 </td>
-<td style="text-align: left;"><code></code><em>$        0.25</em> </td>
-</tr>
-<tr>
-<td style="text-align: left;">10</td>
-<td style="text-align: left;">VLMTG1300-GS08</td>
-<td style="text-align: left;">https://www.digikey.com/en/products/detail/vishay-semiconductor-opto-division/VLMTG1300-GS08/2813351?s=N4IgTCBcDaIGoBkCyAVA4gRgMwAYcFo0BlHADhAF0BfIA</td>
-<td style="text-align: left;">LED</td>
-<td style="text-align: left;"><code></code>$         0.229 </td>
-<td style="text-align: left;"><code></code><em>$        2.29</em> </td>
-</tr>
-<tr>
-<td style="text-align: left;">5</td>
-<td style="text-align: left;">045101.5MRL</td>
-<td style="text-align: left;">https://www.digikey.com/en/products/detail/littelfuse-inc/045101-5MRL/700820</td>
-<td style="text-align: left;">Fuse</td>
-<td style="text-align: left;"><code></code>$         1.076 </td>
-<td style="text-align: left;"><code></code><em>$        5.38</em> </td>
-</tr>
-<tr>
-<td style="text-align: left;">4</td>
-<td style="text-align: left;">MPU-6500</td>
-<td style="text-align: left;">https://www.digikey.com/en/products/detail/tdk-invensense/MPU-6500/4385412</td>
-<td style="text-align: left;">Gyroscope</td>
-<td style="text-align: left;"><code></code>$         6.462 </td>
-<td style="text-align: left;"><code></code><em>$       25.85</em> </td>
-</tr>
-<tr>
-<td style="text-align: left;">5</td>
-<td style="text-align: left;">PJ-102A</td>
-<td style="text-align: left;">https://www.digikey.com/en/products/detail/same-sky-formerly-cui-devices/PJ-102A/275425</td>
-<td style="text-align: left;">Barrel Jack</td>
-<td style="text-align: left;"><code></code>$         0.650 </td>
-<td style="text-align: left;"><code></code><em>$        3.25</em> </td>
-</tr>
-<tr>
-<td style="text-align: left;">10</td>
-<td style="text-align: left;">61300811121</td>
-<td style="text-align: left;">https://www.digikey.com/en/products/detail/w%C3%BCrth-elektronik/61300811121/4846839</td>
-<td style="text-align: left;">Headers</td>
-<td style="text-align: left;"><code></code>$         0.300 </td>
-<td style="text-align: left;"><code></code><em>$        3.00</em> </td>
-</tr>
-<tr>
-<td style="text-align: left;">5</td>
-<td style="text-align: left;">LQM31PN3R3M00L</td>
-<td style="text-align: left;">https://www.digikey.com/en/products/detail/murata-electronics/LQM31PN3R3M00L/2594619?s=N4IgTCBcDaIDIEUCyBmAjABQHIoEoqQAZC4QBdAXyA</td>
-<td style="text-align: left;">Inductor</td>
-<td style="text-align: left;"><code></code>$         0.240 </td>
-<td style="text-align: left;"><code></code><em>$        1.20</em> </td>
-</tr>
-<tr>
-<td style="text-align: left;">5</td>
-<td style="text-align: left;">ERJ-3EKF5102V</td>
-<td style="text-align: left;">https://www.digikey.com/en/products/detail/panasonic-electronic-components/ERJ-3EKF5102V/1746429?s=N4IgTCBcDaIKICUBSBaAzHA0gMQKwEYAGMANRAF0BfIA</td>
-<td style="text-align: left;">51k resistor</td>
-<td style="text-align: left;"><code></code>$         0.035 </td>
-<td style="text-align: left;"><code></code><em>$        0.18</em> </td>
-</tr>
-<tr>
-<td style="text-align: left;">5</td>
-<td style="text-align: left;">ERJ-3EKF2212V</td>
-<td style="text-align: left;">https://www.digikey.com/en/products/detail/panasonic-electronic-components/ERJ-3EKF2212V/196218?s=N4IgTCBcDaIKICUBSBaAzHA0gMTGAjGAGogC6AvkA</td>
-<td style="text-align: left;">22.1k resistor</td>
-<td style="text-align: left;"><code></code>$         0.035 </td>
-<td style="text-align: left;"><code></code><em>$        0.18</em> </td>
-</tr>
-<tr>
-<td style="text-align: left;">3</td>
-<td style="text-align: left;">B3U-1000P</td>
-<td style="text-align: left;">https://www.digikey.com/en/products/detail/omron-electronics-inc-emc-div/B3U-1000P/1534338</td>
-<td style="text-align: left;">Switch</td>
-<td style="text-align: left;"><code></code>$         1.000 </td>
-<td style="text-align: left;"><code></code><em>$        3.00</em> </td>
-</tr>
-<tr>
-<td style="text-align: left;">4</td>
-<td style="text-align: left;">PIC18F27Q10T-I/ML</td>
-<td style="text-align: left;">https://www.digikey.com/en/products/detail/microchip-technology/PIC18F27Q10T-I-ML/10187781?s=N4IgTCBcDaIAoEkDCBGAHAMTAdgIooAYAVAWgQHoBZAGRAF0BfIA</td>
-<td style="text-align: left;">Microcontroller</td>
-<td style="text-align: left;"><code></code>$         1.470 </td>
-<td style="text-align: left;"><code></code><em>$        5.88</em> </td>
-</tr>
-<tr>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"><strong>TOTAL</strong></td>
-<td style="text-align: left;"><strong>$.       59.96</strong></td>
+<td style="text-align: center;"><strong>Total Power (from 9V Battery)</strong></td>
+<td style="text-align: center;"><strong>9V</strong></td>
+<td style="text-align: center;"><strong>~40mA</strong></td>
+<td style="text-align: center;"><strong>~360mW</strong></td>
 </tr>
 </tbody>
 </table>
+<ul>
+<li><strong>Battery:</strong> 9V source</li>
+<li><strong>LMR50410 Efficiency:</strong> ~85%</li>
+<li><strong>Estimated Battery Life:</strong> If using a <strong>9V battery (~500mAh capacity)</strong></li>
+<li><strong>Run Time = (500mAh) / (40mA) = ~12.5 hours</strong> (estimated)</li>
+</ul>
 
 
 
@@ -801,7 +771,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Main" rel="prev">
+          <a href="../Individual%20Schematic/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Individual Schematic" rel="prev">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -811,20 +781,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Main
+                Individual Schematic
               </div>
             </div>
           </a>
         
         
           
-          <a href="../Block%20Diagram/" class="md-footer__link md-footer__link--next" aria-label="Next: Block Diagram" rel="next">
+          <a href="../subfolder/" class="md-footer__link md-footer__link--next" aria-label="Next: This is the index to a subfolder" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Block Diagram
+                This is the index to a subfolder
               </div>
             </div>
             <div class="md-footer__button md-icon">
