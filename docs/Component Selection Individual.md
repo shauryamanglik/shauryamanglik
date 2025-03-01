@@ -1,7 +1,3 @@
-﻿**EGR314: Component Selection**
-
-**Shaurya Manglik**
-
 **1. Microcontroller**
 
 |**Option**|**Component**|**Pros**|**Cons**|
