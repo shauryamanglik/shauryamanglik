@@ -20,3 +20,16 @@ Gyroscope Subsystem
 [Component Selection](https://shauryamanglik.github.io/shauryamanglik/Component%20Selection/)
 
 [Schematic](https://shauryamanglik.github.io/shauryamanglik/Individual%20Schematic/)
+
+
+
+### Team Website
+
+[Click Here](https://egr314-2025-s-309.github.io/)
+
+#### Team Members
+
+Baron Guido
+Bruce Myers
+Aadish Lele
+Shaurya Manglik
