@@ -30,6 +30,9 @@ Gyroscope Subsystem
 #### Team Members
 
 Baron Guido
+
 Bruce Myers
+
 Aadish Lele
+
 Shaurya Manglik
