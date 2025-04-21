@@ -463,23 +463,23 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#messages-shaurya-sends-receives" class="md-nav__link">
-    Messages Shaurya Sends &amp; Receives
+  <a href="#message-types" class="md-nav__link">
+    Message Types
   </a>
   
-    <nav class="md-nav" aria-label="Messages Shaurya Sends & Receives">
+    <nav class="md-nav" aria-label="Message Types">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#message-type-2-update-motor-speed-sent-to-aadish" class="md-nav__link">
-    Message Type 2 – Update Motor Speed (Sent to Aadish)
+  <a href="#type-1-motor-direction-command-sent-from-shaurya-to-aadish" class="md-nav__link">
+    Type 1 – Motor Direction Command (Sent from Shaurya to Aadish)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#message-type-3-rotational-velocity-sent-to-bruce" class="md-nav__link">
-    Message Type 3 – Rotational Velocity (Sent to Bruce)
+  <a href="#type-2-acknowledgment-sent-from-aadish-to-shaurya" class="md-nav__link">
+    Type 2 – Acknowledgment (Sent from Aadish to Shaurya)
   </a>
   
 </li>
@@ -490,8 +490,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#message-handling-code-for-mplab-x-xc8" class="md-nav__link">
-    Message Handling Code (For MPLAB X - XC8)
+  <a href="#serial-message-format" class="md-nav__link">
+    Serial Message Format
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mplab-x-code-xc8-uart-handler" class="md-nav__link">
+    MPLAB X Code (XC8 UART Handler)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    Summary
   </a>
   
 </li>
@@ -671,23 +685,23 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#messages-shaurya-sends-receives" class="md-nav__link">
-    Messages Shaurya Sends &amp; Receives
+  <a href="#message-types" class="md-nav__link">
+    Message Types
   </a>
   
-    <nav class="md-nav" aria-label="Messages Shaurya Sends & Receives">
+    <nav class="md-nav" aria-label="Message Types">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#message-type-2-update-motor-speed-sent-to-aadish" class="md-nav__link">
-    Message Type 2 – Update Motor Speed (Sent to Aadish)
+  <a href="#type-1-motor-direction-command-sent-from-shaurya-to-aadish" class="md-nav__link">
+    Type 1 – Motor Direction Command (Sent from Shaurya to Aadish)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#message-type-3-rotational-velocity-sent-to-bruce" class="md-nav__link">
-    Message Type 3 – Rotational Velocity (Sent to Bruce)
+  <a href="#type-2-acknowledgment-sent-from-aadish-to-shaurya" class="md-nav__link">
+    Type 2 – Acknowledgment (Sent from Aadish to Shaurya)
   </a>
   
 </li>
@@ -698,8 +712,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#message-handling-code-for-mplab-x-xc8" class="md-nav__link">
-    Message Handling Code (For MPLAB X - XC8)
+  <a href="#serial-message-format" class="md-nav__link">
+    Serial Message Format
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mplab-x-code-xc8-uart-handler" class="md-nav__link">
+    MPLAB X Code (XC8 UART Handler)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    Summary
   </a>
   
 </li>
@@ -729,10 +757,9 @@
 
 <h1 id="application-programming-interface-api"><strong>Application Programming Interface (API)</strong></h1>
 <h2 id="overview"><strong>Overview</strong></h2>
-<p>This document defines how my subsystem communicates using <strong>UART-based daisy chain messaging</strong> in <strong>Team 309’s project</strong>. It follows the agreed <strong>message structure</strong> used by all team members.</p>
+<p>This document defines how Shaurya's subsystem communicates using <strong>UART-based messaging</strong> in the updated <strong>Team 309A project</strong>. It uses a simplified 2-person communication model between Shaurya (Sensor) and Aadish (Motor Driver).</p>
 <hr />
 <h2 id="user-id-assignments"><strong>User ID Assignments</strong></h2>
-<p>Each team member has a unique <strong>User ID</strong> for message routing:</p>
 <table>
 <thead>
 <tr>
@@ -742,20 +769,12 @@
 </thead>
 <tbody>
 <tr>
-<td>Bruce</td>
-<td>0xFF</td>
-</tr>
-<tr>
-<td>Baron</td>
-<td>0xFE</td>
+<td>Shaurya</td>
+<td>0xFC</td>
 </tr>
 <tr>
 <td>Aadish</td>
 <td>0xFD</td>
-</tr>
-<tr>
-<td><strong>Shaurya</strong></td>
-<td><strong>0xFC</strong></td>
 </tr>
 </tbody>
 </table>
@@ -773,231 +792,184 @@
 </thead>
 <tbody>
 <tr>
-<td>1-2</td>
-<td><strong>Prefix</strong></td>
+<td>1–2</td>
+<td>Prefix</td>
 <td>uint16_t</td>
 <td>Message start identifier</td>
 </tr>
 <tr>
 <td>3</td>
-<td><strong>Sender ID</strong></td>
+<td>Sender ID</td>
 <td>uint8_t</td>
-<td>Identifies who sent the message</td>
+<td>Identifies sender</td>
 </tr>
 <tr>
 <td>4</td>
-<td><strong>Receiver ID</strong></td>
+<td>Receiver ID</td>
 <td>uint8_t</td>
-<td>Identifies who should receive the message</td>
+<td>Identifies recipient</td>
 </tr>
 <tr>
-<td>5-6</td>
-<td><strong>Data</strong></td>
+<td>5–6</td>
+<td>Data</td>
 <td>uint16_t</td>
 <td>Message-specific data</td>
 </tr>
 <tr>
-<td>7-8</td>
-<td><strong>Suffix</strong></td>
+<td>7–8</td>
+<td>Suffix</td>
 <td>uint16_t</td>
 <td>Message end identifier</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="messages-shaurya-sends-receives"><strong>Messages Shaurya Sends &amp; Receives</strong></h2>
-<h3 id="message-type-2-update-motor-speed-sent-to-aadish"><strong>Message Type 2 – Update Motor Speed (Sent to Aadish)</strong></h3>
+<h2 id="message-types"><strong>Message Types</strong></h2>
+<h3 id="type-1-motor-direction-command-sent-from-shaurya-to-aadish"><strong>Type 1 – Motor Direction Command (Sent from Shaurya to Aadish)</strong></h3>
 <table>
 <thead>
 <tr>
-<th>Byte</th>
-<th>Variable Name</th>
-<th>Data Type</th>
-<th>Min Value</th>
-<th>Max Value</th>
-<th>Example</th>
+<th>Condition</th>
+<th>Message ID</th>
+<th>Meaning</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>1-2</td>
-<td>prefix</td>
-<td>uint16_t</td>
-<td>0x0002</td>
-<td>0x0002</td>
-<td>0x0002</td>
+<td>Temp &gt; 25°C</td>
+<td>0x0040</td>
+<td>Motor Forward</td>
 </tr>
 <tr>
-<td>3</td>
-<td>sender_id</td>
-<td>uint8_t</td>
-<td>0xFC</td>
-<td>0xFC</td>
-<td>0xFC</td>
-</tr>
-<tr>
-<td>4</td>
-<td>receiver_id</td>
-<td>uint8_t</td>
-<td>0xFD</td>
-<td>0xFD</td>
-<td>0xFD</td>
-</tr>
-<tr>
-<td>5-6</td>
-<td>motor_speed</td>
-<td>uint16_t</td>
-<td>0</td>
-<td>255</td>
-<td>120</td>
-</tr>
-<tr>
-<td>7-8</td>
-<td>suffix</td>
-<td>uint16_t</td>
-<td>0x0021</td>
-<td>0x0021</td>
-<td>0x0021</td>
+<td>Temp ≤ 25°C</td>
+<td>0x0041</td>
+<td>Motor Reverse</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Function:</strong> Tells Aadish to adjust the motor speed.</p>
-<hr />
-<h3 id="message-type-3-rotational-velocity-sent-to-bruce"><strong>Message Type 3 – Rotational Velocity (Sent to Bruce)</strong></h3>
+<h3 id="type-2-acknowledgment-sent-from-aadish-to-shaurya"><strong>Type 2 – Acknowledgment (Sent from Aadish to Shaurya)</strong></h3>
 <table>
 <thead>
 <tr>
-<th>Byte</th>
-<th>Variable Name</th>
-<th>Data Type</th>
-<th>Min Value</th>
-<th>Max Value</th>
-<th>Example</th>
+<th>Message ID</th>
+<th>Meaning</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>1-2</td>
-<td>prefix</td>
-<td>uint16_t</td>
-<td>0x0003</td>
-<td>0x0003</td>
-<td>0x0003</td>
+<td>0x00AF</td>
+<td>Command Received</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="serial-message-format"><strong>Serial Message Format</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Byte #</th>
+<th>Field</th>
+<th>Example (Forward)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1–2</td>
+<td>Prefix</td>
+<td>0x0001</td>
 </tr>
 <tr>
 <td>3</td>
-<td>sender_id</td>
-<td>uint8_t</td>
-<td>0xFC</td>
-<td>0xFC</td>
+<td>Sender ID</td>
 <td>0xFC</td>
 </tr>
 <tr>
 <td>4</td>
-<td>receiver_id</td>
-<td>uint8_t</td>
-<td>0xFF</td>
-<td>0xFF</td>
-<td>0xFF</td>
+<td>Receiver ID</td>
+<td>0xFD</td>
 </tr>
 <tr>
-<td>5-6</td>
-<td>rotational_velocity</td>
-<td>uint16_t</td>
-<td>0</td>
-<td>65535</td>
-<td>1500</td>
+<td>5–6</td>
+<td>Data</td>
+<td>0x0040 or 0x0041</td>
 </tr>
 <tr>
-<td>7-8</td>
-<td>suffix</td>
-<td>uint16_t</td>
-<td>0x0022</td>
-<td>0x0022</td>
-<td>0x0022</td>
+<td>7–8</td>
+<td>Suffix</td>
+<td>0x00EE</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Function:</strong> Sends rotational velocity data to Bruce for display.</p>
 <hr />
-<h2 id="message-handling-code-for-mplab-x-xc8"><strong>Message Handling Code (For MPLAB X - XC8)</strong></h2>
-<pre><code>#include &lt;xc.h&gt;
-#include &lt;stdint.h
-#include &lt;stdbool.h&gt;
+<h2 id="mplab-x-code-xc8-uart-handler"><strong>MPLAB X Code (XC8 UART Handler)</strong></h2>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;xc.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdint.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdbool.h&gt;</span>
 
-#define UART_BUFFER_SIZE 10
-#define MSG_PREFIX_2 0x0002  // Motor Speed Update
-#define MSG_PREFIX_3 0x0003  // Rotational Velocity
-#define MSG_SUFFIX_2 0x0021
-#define MSG_SUFFIX_3 0x0022
+<span class="cp">#define UART_BUFFER_SIZE 10</span>
+<span class="cp">#define PREFIX_CMD       0x0001</span>
+<span class="cp">#define PREFIX_ACK       0x0002</span>
+<span class="cp">#define SUFFIX           0x00EE</span>
 
-// UART Receive Buffer
-volatile uint8_t uartBuffer[UART_BUFFER_SIZE];
-volatile uint8_t bufferIndex = 0;
+<span class="cp">#define CMD_FORWARD      0x0040</span>
+<span class="cp">#define CMD_REVERSE      0x0041</span>
+<span class="cp">#define ACK              0x00AF</span>
 
-// Function Prototypes
-void UART_Init(void);
-void UART_Send(uint8_t *message, uint8_t length);
-void Process_Message(uint8_t *message, uint8_t length);
-void UART_Receive_Handler(void);
-void UART_Init(void) {
+<span class="k">volatile</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">uartBuffer</span><span class="p">[</span><span class="n">UART_BUFFER_SIZE</span><span class="p">];</span>
+<span class="k">volatile</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">bufferIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 
-    // Configure UART for 9600 baud, 8-N-1
-    SPBRG = 25; // Adjust for different baud rates
-    TXSTAbits.BRGH = 1;
-    RCSTAbits.SPEN = 1; // Enable UART
-    RCSTAbits.CREN = 1; // Enable Reception
-    TXSTAbits.TXEN = 1; // Enable Transmission
+<span class="kt">void</span><span class="w"> </span><span class="nf">UART_Init</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">UART_Send</span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="n">message</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">length</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">Process_Message</span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="n">message</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">length</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">UART_Receive_Handler</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
 
-    // Enable Interrupts
-    PIE1bits.RCIE = 1;
-    INTCONbits.PEIE = 1;
-    INTCONbits.GIE = 1;
-}
-void UART_Send(uint8_t *message, uint8_t length) {
-    for (uint8_t i = 0; i &lt; length; i++) {
-        TXREG = message[i];
-        while (!TXSTAbits.TRMT);
-    }
-}
-void Process_Message(uint8_t *message, uint8_t length) {
-    uint16_t prefix = (message[0] &lt;&lt; 8) | message[1];
-    uint16_t suffix = (message[6] &lt;&lt; 8) | message[7];
-    if (prefix == MSG_PREFIX_2 &amp;&amp; suffix == MSG_SUFFIX_2) {
+<span class="kt">void</span><span class="w"> </span><span class="nf">UART_Init</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">SPBRG</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span><span class="p">;</span><span class="w"> </span><span class="c1">// 9600 baud @ 4MHz</span>
+<span class="w">    </span><span class="n">TXSTAbits</span><span class="p">.</span><span class="n">BRGH</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="n">RCSTAbits</span><span class="p">.</span><span class="n">SPEN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="n">RCSTAbits</span><span class="p">.</span><span class="n">CREN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="n">TXSTAbits</span><span class="p">.</span><span class="n">TXEN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="n">PIE1bits</span><span class="p">.</span><span class="n">RCIE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="n">INTCONbits</span><span class="p">.</span><span class="n">PEIE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="n">INTCONbits</span><span class="p">.</span><span class="n">GIE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
 
-        // Process Motor Speed Update
-        uint8_t motor_speed = message[4];
-        // Apply speed control logic here
-    }
+<span class="kt">void</span><span class="w"> </span><span class="nf">UART_Send</span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="n">message</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">length</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">TXREG</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">message</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">TXSTAbits</span><span class="p">.</span><span class="n">TRMT</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 
-    else if (prefix == MSG_PREFIX_3 &amp;&amp; suffix == MSG_SUFFIX_3) {
+<span class="kt">void</span><span class="w"> </span><span class="nf">Process_Message</span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="n">message</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">length</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">prefix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">message</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">8</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">message</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+<span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">suffix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">message</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">8</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">message</span><span class="p">[</span><span class="mi">7</span><span class="p">];</span>
 
-        // Process Rotational Velocity
-        uint16_t velocity = (message[4] &lt;&lt; 8) | message[5];
-        // Store velocity data
-    }
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">prefix</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">PREFIX_ACK</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">suffix</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">SUFFIX</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// ACK received from Aadish</span>
+<span class="w">        </span><span class="n">LATBbits</span><span class="p">.</span><span class="n">LATB0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// Light up LED as acknowledgment</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 
-    // Send Acknowledgment
-    uint8_t ack_msg[] = {message[0], message[1], 0x01};
-    UART_Send(ack_msg, 3);
-}
+<span class="kt">void</span><span class="w"> </span><span class="nf">UART_Receive_Handler</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">PIR1bits</span><span class="p">.</span><span class="n">RCIF</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">receivedByte</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RCREG</span><span class="p">;</span>
 
-void UART_Receive_Handler(void) {
-    if (PIR1bits.RCIF) {
-        uint8_t receivedByte = RCREG;
-
-        if (bufferIndex == 0 &amp;&amp; receivedByte != 0x00) {
-            uartBuffer[bufferIndex++] = receivedByte;
-        } else if (bufferIndex &gt; 0) {
-            uartBuffer[bufferIndex++] = receivedByte;
-            if (bufferIndex &gt;= UART_BUFFER_SIZE) {
-                Process_Message(uartBuffer, bufferIndex);
-                bufferIndex = 0; // Reset buffer
-            }
-        }
-    }
-}
-</code></pre>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">bufferIndex</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">receivedByte</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mh">0x00</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">uartBuffer</span><span class="p">[</span><span class="n">bufferIndex</span><span class="o">++</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">receivedByte</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">bufferIndex</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">uartBuffer</span><span class="p">[</span><span class="n">bufferIndex</span><span class="o">++</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">receivedByte</span><span class="p">;</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">bufferIndex</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">8</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">Process_Message</span><span class="p">(</span><span class="n">uartBuffer</span><span class="p">,</span><span class="w"> </span><span class="n">bufferIndex</span><span class="p">);</span>
+<span class="w">                </span><span class="n">bufferIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="summary"><strong>Summary</strong></h2>
+<p>Shaurya reads temperature using the TC74A4-3.3VCTTR sensor. If temperature is above 25°C, a <strong>forward</strong> command is sent to Aadish. If 25°C or below, a <strong>reverse</strong> command is sent. Upon receiving an ACK from Aadish, Shaurya turns on an LED for confirmation.</p>
 
 
 
