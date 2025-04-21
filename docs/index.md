@@ -5,11 +5,11 @@ title: Main
 
 ## Shaurya Manglik
 
-Team 309
+Team 309A
 
 EGR 314: Prof. Nichols
 
-Gyroscope Subsystem
+Temperature Sensor Subsystem
 
 
 
@@ -25,13 +25,9 @@ Gyroscope Subsystem
 
 ### Team Website
 
-[Click Here](https://egr314-2025-s-309.github.io/)
+[Click Here](https://egr314-team-309a.github.io/EGR314_TEAM309A.github.io/)
 
 #### Team Members
-
-Baron Guido
-
-Bruce Myers
 
 Aadish Lele
 
