@@ -68,6 +68,16 @@
 
 
 
+
+
+
+
+**PCB Photo**
+
+![IMG_9788](https://github.com/user-attachments/assets/df6605f5-530f-4c8b-a423-3965fd6d434b)
+
+
+
 ---
 
 
