@@ -12,13 +12,13 @@
       
       
       
-        <link rel="canonical" href="https://embedded-systems-design.github.io/template_report/API/">
+        <link rel="canonical" href="https://embedded-systems-design.github.io/template_report/Resources/">
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../Individual%20Schematic%20%26%20PCB/">
       
       
-        <link rel="next" href="../Bill%20of%20Materials/">
+        <link rel="next" href="../subfolder/">
       
       
       <link rel="icon" href="../static/logo.png">
@@ -29,7 +29,7 @@
 
     
       
-        <title>Application Programming Interface (API) - EGR314 Shaurya Manglik</title>
+        <title>Resources - EGR314 Shaurya Manglik</title>
       
     
     
@@ -93,7 +93,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#application-programming-interface-api" class="md-skip">
+        <a href="#resources" class="md-skip">
           Skip to content
         </a>
       
@@ -128,7 +128,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Application Programming Interface (API)
+              Resources
             
           </span>
         </div>
@@ -217,11 +217,9 @@
         
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../API/" class="md-tabs__link">
         
   
     
@@ -304,9 +302,11 @@
         
   
   
+    
   
-    <li class="md-tabs__item">
-      <a href="../Resources/" class="md-tabs__link">
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
         
   
     
@@ -411,29 +411,9 @@
       
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Application Programming Interface (API)
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../API/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -442,95 +422,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    Overview
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#user-id-assignments" class="md-nav__link">
-    User ID Assignments
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#message-structure" class="md-nav__link">
-    Message Structure
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#message-types" class="md-nav__link">
-    Message Types
-  </a>
-  
-    <nav class="md-nav" aria-label="Message Types">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#type-1-motor-direction-command-sent-from-shaurya-to-aadish" class="md-nav__link">
-    Type 1 – Motor Direction Command (Sent from Shaurya to Aadish)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#type-2-acknowledgment-sent-from-aadish-to-shaurya" class="md-nav__link">
-    Type 2 – Acknowledgment (Sent from Aadish to Shaurya)
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#serial-message-format" class="md-nav__link">
-    Serial Message Format
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#mplab-x-code-xc8-uart-handler" class="md-nav__link">
-    MPLAB X Code (XC8 UART Handler)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    Summary
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -615,9 +506,18 @@
       
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../Resources/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -626,6 +526,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -693,83 +594,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    Overview
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#user-id-assignments" class="md-nav__link">
-    User ID Assignments
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#message-structure" class="md-nav__link">
-    Message Structure
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#message-types" class="md-nav__link">
-    Message Types
-  </a>
-  
-    <nav class="md-nav" aria-label="Message Types">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#type-1-motor-direction-command-sent-from-shaurya-to-aadish" class="md-nav__link">
-    Type 1 – Motor Direction Command (Sent from Shaurya to Aadish)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#type-2-acknowledgment-sent-from-aadish-to-shaurya" class="md-nav__link">
-    Type 2 – Acknowledgment (Sent from Aadish to Shaurya)
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#serial-message-format" class="md-nav__link">
-    Serial Message Format
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#mplab-x-code-xc8-uart-handler" class="md-nav__link">
-    MPLAB X Code (XC8 UART Handler)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    Summary
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -783,7 +607,7 @@
                   
 
   
-    <a href="https://github.com/embedded-systems-design/template_report/edit/main/docs/API.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/embedded-systems-design/template_report/edit/main/docs/Resources.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -791,290 +615,9 @@
   
 
 
-<h1 id="application-programming-interface-api"><strong>Application Programming Interface (API)</strong></h1>
-<hr />
-<h2 id="overview"><strong>Overview</strong></h2>
-<p>This document defines how Shaurya's subsystem communicates using UART-based messaging in the updated Team 309A project. It uses a simplified 2-person communication model between Shaurya (Sensor) and Aadish (Motor Driver).</p>
-<h2 id="user-id-assignments"><strong>User ID Assignments</strong></h2>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">User</th>
-<th style="text-align: left;">User ID</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">Shaurya</td>
-<td style="text-align: left;">0xFC</td>
-</tr>
-<tr>
-<td style="text-align: left;">Aadish</td>
-<td style="text-align: left;">0xFD</td>
-</tr>
-</tbody>
-</table>
-<h2 id="message-structure"><strong>Message Structure</strong></h2>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Byte #</th>
-<th style="text-align: left;">Field Name</th>
-<th style="text-align: left;">Data Type</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">1–2</td>
-<td style="text-align: left;">Prefix</td>
-<td style="text-align: left;">uint16_t</td>
-<td style="text-align: left;">Message start identifier</td>
-</tr>
-<tr>
-<td style="text-align: left;">3</td>
-<td style="text-align: left;">Sender ID</td>
-<td style="text-align: left;">uint8_t</td>
-<td style="text-align: left;">Identifies sender</td>
-</tr>
-<tr>
-<td style="text-align: left;">4</td>
-<td style="text-align: left;">Receiver ID</td>
-<td style="text-align: left;">uint8_t</td>
-<td style="text-align: left;">Identifies recipient</td>
-</tr>
-<tr>
-<td style="text-align: left;">5–6</td>
-<td style="text-align: left;">Data</td>
-<td style="text-align: left;">uint16_t</td>
-<td style="text-align: left;">Message-specific data</td>
-</tr>
-<tr>
-<td style="text-align: left;">7–8</td>
-<td style="text-align: left;">Suffix</td>
-<td style="text-align: left;">uint16_t</td>
-<td style="text-align: left;">Message end identifier</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="message-types"><strong>Message Types</strong></h2>
-<h3 id="type-1-motor-direction-command-sent-from-shaurya-to-aadish"><strong>Type 1 – Motor Direction Command (Sent from Shaurya to Aadish)</strong></h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Condition</th>
-<th style="text-align: left;">Message ID</th>
-<th style="text-align: left;">Meaning</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">Temp ≤ 25°C</td>
-<td style="text-align: left;">0x01</td>
-<td style="text-align: left;">Motor Forward</td>
-</tr>
-<tr>
-<td style="text-align: left;">25°C \&lt; Temp ≤ 30°C</td>
-<td style="text-align: left;">0x02</td>
-<td style="text-align: left;">Motor Reverse</td>
-</tr>
-<tr>
-<td style="text-align: left;">Temp &gt; 30°C</td>
-<td style="text-align: left;">0x03</td>
-<td style="text-align: left;">Motor Off</td>
-</tr>
-</tbody>
-</table>
-<h3 id="type-2-acknowledgment-sent-from-aadish-to-shaurya"><strong>Type 2 – Acknowledgment (Sent from Aadish to Shaurya)</strong></h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Message ID</th>
-<th style="text-align: left;">Meaning</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">0x01</td>
-<td style="text-align: left;">Motor Forward Confirmation – Blink RB0</td>
-</tr>
-<tr>
-<td style="text-align: left;">0x02</td>
-<td style="text-align: left;">Motor Reverse Confirmation – Blink RB4</td>
-</tr>
-<tr>
-<td style="text-align: left;">0x03</td>
-<td style="text-align: left;">Motor Off Confirmation – Blink RB0 &amp; RB4</td>
-</tr>
-</tbody>
-</table>
-<h2 id="serial-message-format"><strong>Serial Message Format</strong></h2>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Field</th>
-<th style="text-align: left;">Example (Motor Forward)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">Prefix</td>
-<td style="text-align: left;">FS</td>
-</tr>
-<tr>
-<td style="text-align: left;">Sender ID</td>
-<td style="text-align: left;">S</td>
-</tr>
-<tr>
-<td style="text-align: left;">Receiver ID</td>
-<td style="text-align: left;">A</td>
-</tr>
-<tr>
-<td style="text-align: left;">Data</td>
-<td style="text-align: left;">01 (Forward)</td>
-</tr>
-<tr>
-<td style="text-align: left;">Suffix</td>
-<td style="text-align: left;">FS</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="mplab-x-code-xc8-uart-handler"><strong>MPLAB X Code (XC8 UART Handler)</strong></h2>
-<pre><code>\#include "mcc\_generated\_files/system/system.h"
-
-\#define AHT21\_ADDR 0x38
-
-void send\_uart\_message(const char\* msg) {
-
-    for (uint8\_t i \= 0; i \&lt; 8; i++) {
-
-        while (\!EUSART1\_IsTxReady());
-
-        EUSART1\_Write(msg\[i\]);
-
-    }
-
-}
-
-void blink\_led(uint8\_t cmd) {
-
-    if (cmd \== '1') LATBbits.LATB0 \= 1;
-
-    if (cmd \== '2') LATBbits.LATB4 \= 1;
-
-    if (cmd \== '3') { LATBbits.LATB0 \= 1; LATBbits.LATB4 \= 1; }
-
-    \_\_delay\_ms(200);
-
-    LATBbits.LATB0 \= 0;
-
-    LATBbits.LATB4 \= 0;
-
-}
-
-int main(void)
-
-{
-
-    SYSTEM\_Initialize();
-
-    INTERRUPT\_GlobalInterruptEnable();
-
-    INTERRUPT\_PeripheralInterruptEnable();
-
-    ANSELBbits.ANSELB0 \= 0;  // Make sure RB0 is digital
-
-    ANSELBbits.ANSELB4 \= 0;  // Make sure RB4 is digital
-
-    TRISBbits.TRISB0 \= 0;    // Set RB0 as output
-
-    TRISBbits.TRISB4 \= 0;    // Set RB4 as output
-
-    LATBbits.LATB0 \= 0;      // Ensure RB0 starts LOW
-
-    LATBbits.LATB4 \= 0;      // Ensure RB4 starts LOW
-
-    uint8\_t cmd\[3\] \= {0xAC, 0x33, 0x00};
-
-    uint8\_t data\[6\];
-
-    char rx\_buf\[8\] \= {0};
-
-    while (1)
-
-    {
-
-        // Send measurement trigger
-
-        I2C1\_Write(AHT21\_ADDR, cmd, 3);
-
-        \_\_delay\_ms(80);
-
-        // Read data
-
-        if (I2C1\_Read(AHT21\_ADDR, data, 6\) &amp;&amp; \!(data\[0\] &amp; 0x80))
-
-        {
-
-            uint32\_t raw\_temp \= ((uint32\_t)(data\[3\] &amp; 0x0F) \&lt;\&lt; 16\) | ((uint32\_t)data\[4\] \&lt;\&lt; 8\) | data\[5\];
-
-            float temperature \= ((float)raw\_temp / 1048576.0f) \* 200.0f \- 50.0f;
-
-            printf("Temperature: %.2f C\\r\\n", temperature);  // ? Added line
-
-            char command \= '3'; // Default to off
-
-            if (temperature \&lt;= 25\) command \= '1'; // Forward
-
-            else if (temperature \&lt;= 30\) command \= '2'; // Reverse
-
-            char msg\[8\] \= { 'F', 'S', 'S', 'A', '0', command, 'F', 'S' };
-
-            send\_uart\_message(msg);
-
-        }
-
-        // Check for UART confirmation from A
-
-        if (EUSART1\_IsRxReady()) {
-
-            char byte \= EUSART1\_Read();
-
-            for (uint8\_t i \= 0; i \&lt; 7; i++) rx\_buf\[i\] \= rx\_buf\[i \+ 1\];
-
-            rx\_buf\[7\] \= byte;
-
-            if (rx\_buf\[0\] \== 'F' &amp;&amp; rx\_buf\[1\] \== 'S' &amp;&amp;
-
-                rx\_buf\[2\] \== 'A' &amp;&amp; rx\_buf\[3\] \== 'S' &amp;&amp;
-
-                rx\_buf\[4\] \== '0' &amp;&amp; rx\_buf\[6\] \== 'F' &amp;&amp; rx\_buf\[7\] \== 'S') {
-
-                blink\_led(rx\_buf\[5\]);
-
-            }
-
-        }
-
-        \_\_delay\_ms(1000);
-
-    }
-
-}
-</code></pre>
-<hr />
-<h2 id="summary"><strong>Summary</strong></h2>
-<p>Shaurya's subsystem uses the AHT21 sensor to read temperature. Based on the reading:<br />
-- If ≤ 25°C, it sends command 01 (motor forward)<br />
-- If between 25°C and 30°C, it sends command 02 (motor reverse)<br />
-- If &gt; 30°C, it sends command 03 (motor off)<br />
-The command is sent to Aadish's subsystem using the message format FSSA0xFS.<br />
-Upon executing the command, Aadish responds using FSAS0xFS. When Shaurya receives this response:<br />
-- '01' makes Shaurya blink RB0 LED<br />
-- '02' blinks RB4 LED<br />
-- '03' blinks both RB0 and RB4 for 200 ms</p>
+<h1 id="resources"><strong>Resources</strong></h1>
+<p><strong>Project File</strong>
+<a href="https://github.com/user-attachments/files/20053985/Temperature_working_27.zip">MPLABX Project File</a></p>
 
 
 
@@ -1102,7 +645,7 @@ Upon executing the command, Aadish responds using FSAS0xFS. When Shaurya receive
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Main" rel="prev">
+          <a href="../Individual%20Schematic%20%26%20PCB/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Individual Schematic &amp; PCB" rel="prev">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1112,20 +655,20 @@ Upon executing the command, Aadish responds using FSAS0xFS. When Shaurya receive
                 Previous
               </span>
               <div class="md-ellipsis">
-                Main
+                Individual Schematic & PCB
               </div>
             </div>
           </a>
         
         
           
-          <a href="../Bill%20of%20Materials/" class="md-footer__link md-footer__link--next" aria-label="Next: Bill of Materials" rel="next">
+          <a href="../subfolder/" class="md-footer__link md-footer__link--next" aria-label="Next: This is the index to a subfolder" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Bill of Materials
+                This is the index to a subfolder
               </div>
             </div>
             <div class="md-footer__button md-icon">
