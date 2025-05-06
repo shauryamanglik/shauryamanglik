@@ -25,6 +25,8 @@ Temperature Sensor Subsystem
 
 [API](https://shauryamanglik.github.io/shauryamanglik/API/)
 
+[Resources](https://shauryamanglik.github.io/shauryamanglik/Resources/)
+
 
 
 ### Team Website
