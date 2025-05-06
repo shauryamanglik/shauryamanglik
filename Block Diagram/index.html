@@ -497,6 +497,19 @@
     Temperature Sensor Subsystem
   </a>
   
+    <nav class="md-nav" aria-label="Temperature Sensor Subsystem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#block-diagram-decision-making-process-alignment-with-product-requirements-individual-subsystem" class="md-nav__link">
+    Block Diagram – Decision-Making Process &amp; Alignment with Product Requirements (Individual Subsystem)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -636,6 +649,19 @@
     Temperature Sensor Subsystem
   </a>
   
+    <nav class="md-nav" aria-label="Temperature Sensor Subsystem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#block-diagram-decision-making-process-alignment-with-product-requirements-individual-subsystem" class="md-nav__link">
+    Block Diagram – Decision-Making Process &amp; Alignment with Product Requirements (Individual Subsystem)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -666,6 +692,24 @@
 <h2 id="temperature-sensor-subsystem">Temperature Sensor Subsystem</h2>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/194f34f3-c77b-4563-855b-09d9bd219ef9" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="BLOCKDIAGRAM_314 (1)" src="https://github.com/user-attachments/assets/194f34f3-c77b-4563-855b-09d9bd219ef9" /></a></p>
 <p><a href="https://github.com/user-attachments/files/20053269/BLOCKDIAGRAM_314.1.pdf">Download PDF</a></p>
+<h3 id="block-diagram-decision-making-process-alignment-with-product-requirements-individual-subsystem"><strong>Block Diagram – Decision-Making Process &amp; Alignment with Product Requirements (Individual Subsystem)</strong></h3>
+<p>The design of this block diagram began with identifying the key responsibilities of my subsystem within the broader Team 309A project: to measure temperature, determine the appropriate motor behavior (forward, reverse, or off), and communicate that decision to the motor driver subsystem via UART. Additionally, my system needed to respond to confirmation messages from the actuator and reflect motor status using on-board LEDs.</p>
+<p>To accomplish this, I selected the <strong>PIC18F27Q10 microcontroller</strong>, which supports both <strong>I²C</strong> and <strong>UART</strong> protocols. It interfaces with the <strong>AHT21 temperature sensor</strong> over I²C to read real-time ambient temperature data. I²C was chosen due to its simple two-wire communication, low pin usage, and native compatibility with both components. UART is used to send formatted motor control messages to the actuator subsystem and receive acknowledgments in return.</p>
+<p>The <strong>AP63203WU-7 voltage regulator</strong> was used to provide a stable 3.3V power rail to both the sensor and MCU, ensuring compatibility with low-power digital components.</p>
+<p>GPIO pins (specifically RB0 and RB4) are used to control LEDs that blink to indicate motor direction (forward, reverse, off) based on acknowledgment messages received over UART. This visual feedback ensures that even without external debugging tools, the user can verify communication and action execution.</p>
+<p>This modular, clearly segmented block diagram reflects not only the subsystem’s function but also how it aligns with our product requirement to:</p>
+<ul>
+<li>
+<p>React to environmental input (temperature).</p>
+</li>
+<li>
+<p>Control another subsystem (motor) via logical thresholds.</p>
+</li>
+<li>
+<p>Confirm actions visually for debugging and usability.</p>
+</li>
+</ul>
+<p>By simplifying the architecture to use just one microcontroller, sensor, and UART interface, the system maintains low complexity while fulfilling its defined role effectively.</p>
 
 
 
